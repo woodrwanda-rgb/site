@@ -1,0 +1,25 @@
+ rwanda-legal-ai/
+ │── backend/
+ │   ├── app/
+ │   ├── requirements.txt
+ │   ├── Procfile  # Flask/Django start command
+ │   └── .env      # Optional for local testing
+ │
+ │── frontend/
+ │   ├── src/
+ │   ├── package.json
+ │   ├── .env      # Optional for local testing
+ │   └── build/    # auto-generated after build
+ │
+ │── data/
+ │── nginx.conf
+ │── docker-compose.yml
+ │── .env.example
+ │── README.md
+ │── .github/workflows/deploy.yml
+web: gunicorn app:app
+web: gunicorn backend.wsgi
+"scripts": {
+"start": "react-scripts start",
+"build": "react-scripts build",
+"serve": "serve -s build"}
